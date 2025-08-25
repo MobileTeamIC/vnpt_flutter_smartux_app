@@ -32,4 +32,12 @@ Runner/GeneratedPluginRegistrant.*
 !default.mode2v3
 !default.pbxuser
 !default.perspectivev3
+
+# SDK folder - ignore all files and folders
 /Runner/SDK/
+/Runner/SDK/ICSmartUX.xcframework/
+/Runner/SDK/ICSmartUX.xcframework/**
+/Runner/SDK/ICSmartUX.xcframework/ios-arm64/
+/Runner/SDK/ICSmartUX.xcframework/ios-arm64_x86_64-simulator/
+/Runner/SDK/ICSmartUX.xcframework/ios-arm64/ICSmartUX.framework/
+/Runner/SDK/ICSmartUX.xcframework/ios-arm64_x86_64-simulator/ICSmartUX.framework/
