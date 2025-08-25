@@ -26,7 +26,7 @@ Tài liệu này hướng dẫn cách tích hợp và cấu hình ICSmartUX SDK 
 ### 1.1. Thêm SDK vào dự án iOS
 
 - Mở `ios/Runner.xcworkspace` bằng Xcode.
-- Thêm `ICSmartUX.xcframework` vào mục `Runner` nếu chưa có. Trong dự án mẫu, SDK đã được đặt sẵn tại: `ios/Runner/SDK/ICSmartUX.xcframework`.
+- Thêm `SDK/ICSmartUX.xcframework` vào mục `Runner` nếu chưa có. Trong dự án mẫu, SDK đã được đặt sẵn tại: `ios/Runner/SDK/ICSmartUX.xcframework`.
 - Trong tab `General` của target `Runner`:
   - Kéo thả `ICSmartUX.xcframework` vào mục `Frameworks, Libraries, and Embedded Content`.
   - Thiết lập `Embed & Sign` cho framework.
@@ -121,6 +121,8 @@ import ICSmartUX
 
 
 ## 2. Cài đặt SDK (Android)
+
+Tạo folder `libs` trong ../android, sau đó kéo thả file `.aar`vào trong folder `libs`
 
 ### 2.1. Thêm dependency (Gradle)
 
