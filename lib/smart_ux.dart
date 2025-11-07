@@ -174,7 +174,7 @@ class SmartUX {
 
   Future<void> trackingNavigationEnter({
     required String screenName,
-    double timeDelay = 0.2,
+    double timeDelay = 2,
     bool forceUpload = false,
   }) async {
     await Channels.smartUX.invokeMethodOnMobile<void>(
