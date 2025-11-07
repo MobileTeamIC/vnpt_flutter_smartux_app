@@ -9,6 +9,12 @@ import ICSmartUX
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         
+        // setup background transparent
+        if let flutterViewController = window?.rootViewController as? FlutterViewController {
+            flutterViewController.view.backgroundColor = UIColor.clear
+            flutterViewController.view.isOpaque = false
+        }
+        
         //===[START] Cấu hình SDK ICSmartUX ===
         let hostICSmartUX = "https://console-smartux.vnpt.vn" // url của server ICSmartUX
         let appKey = "<APP_KEY>" // app key của app
@@ -21,7 +27,7 @@ import ICSmartUX
         icSmartUX.urlUploadEvents = urlUploadEvents
         icSmartUX.platform = .Flutter
         icSmartUX.isPrintLog = true // xem log trên console khi chạy app bằng xcode
-        icSmartUX.timeUploadEvent = 120
+        icSmartUX.timeUploadEvent = 5
         icSmartUX.isShowToastTracking = false;
         icSmartUX.isAutoViewTracking = false;
         icSmartUX.start()
@@ -177,7 +183,9 @@ import ICSmartUX
     
     private func trackingNavigationEnter(args: [String: Any]) {
         guard let screenName = args["screenName"] as? String else { return }
-        ICSmartUX.trackingNavigationEnter(name: screenName)
+        guard let timeDelay = args["timeDelay"] as? Double else { return }
+        guard let forceUpload = args["forceUpload"] as? Bool else { return }
+        ICSmartUX.trackingNavigationEnter(name: screenName, timeDelay: timeDelay, forceUpload: forceUpload)
     }
     
     private func trackingNavigationScreen(args: [String: Any]) {

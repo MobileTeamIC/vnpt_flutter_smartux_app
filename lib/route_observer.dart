@@ -19,7 +19,7 @@ class SmartUXObserver extends RouteObserver<PageRoute<dynamic>> {
         final String? routeName = route.settings.name ?? widgetName;
         if (routeName != null) {
           SmartUX.instance.recordView(screenName: routeName);
-          SmartUX.instance.trackingNavigationScreen(screenName: routeName);
+          SmartUX.instance.trackingNavigationEnter(screenName: routeName);
         }
       }
     }

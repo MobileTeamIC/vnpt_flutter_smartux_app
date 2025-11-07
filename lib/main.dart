@@ -46,6 +46,24 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView(
         children: [
           const SizedBox(height: 16),
+          ElevatedButton(onPressed: (){
+             Navigator.pushNamed(context, '/second_page');
+          }, child: const Text('Next Second Page')),
+         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, '/second_page');
+        },
+        tooltip: 'Next Second Page',
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+
+  Column _buildList() {
+    return Column(
+      children: [
           ...[
             SizedBox(
               width: double.infinity,
@@ -300,20 +318,8 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
           ].expand((element) => [element, const SizedBox(height: 8)]),
-        ],
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          SmartUX.instance.recordAction(
-            actionId: 'floating_action_button',
-            actionName: 'Floating Action Button',
-            screenName: 'HomePage',
-          );
-          Navigator.pushNamed(context, '/second_page');
-        },
-        tooltip: 'Next Second Page',
-        child: const Icon(Icons.add),
-      ),
+       
+      ],
     );
   }
 }
