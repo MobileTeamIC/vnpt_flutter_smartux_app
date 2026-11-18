@@ -16,10 +16,15 @@ import ICSmartUX
         }
         
         //===[START] Cấu hình SDK ICSmartUX ===
-        let hostICSmartUX = "https://console-smartux.vnpt.vn" // url của server ICSmartUX
-        let appKey = "<APP_KEY>" // app key của app
-        let urlUploadImage = "https://console-smartux.vnpt.vn/collector/mobile/heatmap-image" // url upload image
-        let urlUploadEvents = "https://console-smartux.vnpt.vn/collector/mobile/heatmap-event" // url upload events
+//         let hostICSmartUX = "https://console-smartux.vnpt.vn" // url của server ICSmartUX
+//         let appKey = "20a297aa14ef56fc863bc127ace628fe8b5a3072>" // app key của app
+//         let urlUploadImage = "https://console-smartux.vnpt.vn/collector/mobile/heatmap-image" // url upload image
+//         let urlUploadEvents = "https://console-smartux.vnpt.vn/collector/mobile/heatmap-event" // url upload events
+
+           let hostICSmartUX = "https://smartux-dev.icenter.ai" // url của server ICSmartUX
+        let appKey = "e9a1b00c82a3557665b2fcdfe84fdd14a2af6761" // app key của app
+        let urlUploadImage = "https://smartux-dev.icenter.ai/collector/mobile/heatmap-image" // url upload image
+        let urlUploadEvents = "https://smartux-dev.icenter.ai/collector/mobile/heatmap-event" // url upload events
         
         let icSmartUX = ICSmartUX.init(host: hostICSmartUX, appKey: appKey)
         
